@@ -1,0 +1,125 @@
+/* src/pages/Courses.css - Futuristic AI Theme */
+
+.courses-container {
+  padding: 3rem 1rem;
+  background-color: #0f0f1a;
+  min-height: 100vh;
+  color: #e0e0ff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.courses-container h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+  text-align: center;
+  background: linear-gradient(90deg, #00d1ff, #bd00ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(0, 209, 255, 0.3);
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 1rem;
+}
+
+.course-card {
+  background: #1a1a2a;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  border-left: 4px solid #00d1ff;
+  border: 1px solid #252538;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  animation: pulse 6s infinite;
+}
+
+.course-card:hover {
+  transform: translateY(-8px);
+  border-color: #00d1ff;
+  box-shadow: 0 20px 25px -5px rgba(0, 209, 255, 0.1);
+  animation: none;
+}
+
+.course-image {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  user-select: none;
+  pointer-events: none;
+  filter: drop-shadow(0 0 5px rgba(0, 209, 255, 0.3));
+}
+
+.course-card h2 {
+  color: #ffffff;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.course-card p {
+  color: #a0a0c0;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.course-button {
+  background: rgba(0, 209, 255, 0.1);
+  color: #00d1ff;
+  border: 1px solid #00d1ff;
+  border-radius: 8px;
+  padding: 0.6rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.course-button:hover {
+  background: rgba(0, 209, 255, 0.2);
+  box-shadow: 0 0 10px rgba(0, 209, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+/* Pulse animation like roadmap cards */
+@keyframes pulse {
+  0% { box-shadow: 0 0 5px rgba(0, 209, 255, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(0, 209, 255, 0.5); }
+  100% { box-shadow: 0 0 5px rgba(0, 209, 255, 0.3); }
+}
+
+/* Optional: Category based colors */
+.course-card.web {
+  border-color: #00d1ff;
+}
+.course-card.ds {
+  border-color: #00ff88;
+}
+.course-card.ai {
+  border-color: #bd00ff;
+}
+.course-card.devops {
+  border-color: #ff6b00;
+}
+.course-card.security {
+  border-color: #ffee00;
+}
+
+@media (max-width: 768px) {
+  .courses-container h1 {
+    font-size: 2rem;
+  }
+}

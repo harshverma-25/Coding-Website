@@ -1,0 +1,249 @@
+/* Modern DSA Practice Page Styles */
+.dsa-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #e0e0e0;
+  background-color: #0f172a;
+}
+
+.dsa-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.dsa-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.dsa-subtitle {
+  color: #94a3b8;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.source-link {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.source-link:hover {
+  color: #0ea5e9;
+  text-decoration: underline;
+}
+
+.search-box {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.8rem 1rem 0.8rem 2.5rem;
+  border: 2px solid #334155;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #1e293b;
+  color: #e0e0e0;
+  transition: all 0.3s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 2px 15px rgba(56, 189, 248, 0.2);
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+}
+
+.dsa-content {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.topics-sidebar {
+  flex: 0 0 250px;
+  background: #1e293b;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  height: fit-content;
+}
+
+.sidebar-title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #e2e8f0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #334155;
+}
+
+.topics-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.topic-item {
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 500;
+  color: #cbd5e1;
+}
+
+.topic-item:hover {
+  background-color: #334155;
+  color: #e2e8f0;
+}
+
+.topic-item.active {
+  background-color: #38bdf8;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.active-indicator {
+  display: none;
+}
+
+.questions-main {
+  flex: 1;
+  background: #1e293b;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.questions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #334155;
+}
+
+.topic-title {
+  font-size: 1.5rem;
+  color: #f1f5f9;
+  margin: 0;
+}
+
+.questions-count {
+  background-color: #334155;
+  color: #cbd5e1;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.questions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.question-item {
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e293b;
+  border-left: 4px solid transparent;
+  border: 1px solid #4b525d;
+}
+
+.question-item:hover {
+  background-color: #0f172a;
+  border-left-color: #38bdf8;
+  transform: translateX(5px);
+}
+
+.question-text {
+  flex: 1;
+  color: #e2e8f0;
+}
+
+.external-link {
+  color: #94a3b8;
+  font-size: 1.2rem;
+  transition: color 0.2s;
+}
+
+.question-item:hover .external-link {
+  color: #38bdf8;
+}
+
+.no-results {
+  text-align: center;
+  padding: 2rem;
+  color: #94a3b8;
+}
+
+.clear-search {
+  background-color: #38bdf8;
+  color: #0f172a;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.2s;
+}
+
+.clear-search:hover {
+  background-color: #0ea5e9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dsa-content {
+    flex-direction: column;
+  }
+
+  .topics-sidebar {
+    flex: 1;
+    margin-bottom: 1.5rem;
+  }
+
+  .dsa-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dsa-container {
+    padding: 1rem;
+  }
+
+  .questions-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}

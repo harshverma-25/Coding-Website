@@ -1,0 +1,144 @@
+/* Container styles */
+.roadmap-container {
+  padding: 3rem 1rem;
+  background-color: #0f172a;
+  min-height: 100vh;
+  color: #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Heading */
+.roadmap-heading {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #f8fafc;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+/* Grid for cards */
+.roadmap-grid {
+  width: 100%;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+/* Individual roadmap card */
+.roadmap-card {
+  background: #1e293b;
+  border-radius: 14px;
+  padding: 1.5rem 1.5rem 2rem 1.5rem;
+  box-shadow: 0 5px 15px rgba(8, 28, 61, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.roadmap-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(8, 28, 61, 0.7);
+}
+
+/* Image in the card */
+.roadmap-image {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1.25rem;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Title of each card */
+.roadmap-title {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #f8fafc;
+  margin-bottom: 1rem;
+}
+
+/* Description text */
+.roadmap-description {
+  color: #94a3b8;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.75rem;
+  min-height: 70px; /* keep cards uniform */
+}
+
+/* Button styling */
+.roadmap-button {
+  background-color: #38bdf8;
+  color: #0f172a;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.75rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+  user-select: none;
+  display: inline-block;
+}
+
+.roadmap-button:hover {
+  background-color: #0ea5e9;
+  transform: translateY(-3px);
+}
+
+/* Responsive breakpoints */
+
+/* Medium devices */
+@media (max-width: 1024px) {
+  .roadmap-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+
+/* Tablets and smaller */
+@media (max-width: 768px) {
+  .roadmap-heading {
+    font-size: 2rem;
+  }
+
+  .roadmap-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .roadmap-description {
+    min-height: unset;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .roadmap-heading {
+    font-size: 1.7rem;
+  }
+
+  .roadmap-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    gap: 1rem;
+  }
+
+  .roadmap-description {
+    font-size: 0.9rem;
+  }
+
+  .roadmap-button {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.9rem;
+  }
+}
