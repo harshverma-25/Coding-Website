@@ -64,7 +64,7 @@ const HeroSection = () => {
         <div className="image-section">
           <img
             className="image-home"
-            src="https://media0.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif?cid=6c09b952uxzpfmvrou6onqi2ntl98fpbf30b0c7yc889ioe6&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g"
+            src="https://media2.giphy.com/media/Ll22OhMLAlVDb8UQWe/giphy.gif"
             alt="hero"
           />
         </div>
